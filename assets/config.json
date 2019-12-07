@@ -1,0 +1,10 @@
+{
+    "_FYI": "https://firebase.google.com/docs/web/setup",
+    "_COPY_TO": "config.json",
+    "API_KEY": "AIzaSyA4WT3pIJnT2miR8GbB2NB1X_A2rlDlYNI",
+    "AUTH_DOMAIN" : "clone-flutter.firebaseapp.com",
+    "DATABASE_URL": "https://clone-flutter.firebaseio.com",
+    "STORAGE_BUCKET": "youtube-clone-flutter.appspot.com",
+    "PROJECT_ID": "youtube-clone-flutter",
+    "MESSAGING_SENDER_ID": "505639471224"
+  }
