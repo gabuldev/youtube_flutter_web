@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: GitHub Action for Firebase
+      run: echo Hello, world!
+    - name: GitHub Action for Firebase
+      uses: w9jds/firebase-action@v1.1.0
+
