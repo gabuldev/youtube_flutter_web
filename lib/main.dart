@@ -4,14 +4,14 @@ import 'package:interact/pages/home/home_page.dart';
 
 void main() {
   initializeApp(
-      apiKey: "AIzaSyA4WT3pIJnT2miR8GbB2NB1X_A2rlDlYNI",
-      authDomain: "clone-flutter.firebaseapp.com",
-      databaseURL: "https://clone-flutter.firebaseio.com",
-      projectId: "youtube-clone-flutter",
-      storageBucket: "youtube-clone-flutter.appspot.com",
-      messagingSenderId: "505639471224",
-      appId: "1:505639471224:web:79acfbf0944ecc5abc858d",
-      measurementId: "G-S7D7C7RSM1");
+      apiKey: "AIzaSyBEwwE9WxB1CTSSP65qN7Q4sgOun-Y5o_M",
+      authDomain: "flutter-f98f5.firebaseapp.com",
+      databaseURL: "https://flutter-f98f5.firebaseio.com",
+      projectId: "flutter-f98f5",
+      storageBucket: "flutter-f98f5.appspot.com",
+      messagingSenderId: "461978783271",
+      appId: "1:461978783271:web:08b982ce686cf16c548802",
+      measurementId: "G-FLYJP8RX4X");
 
   runApp(MyApp());
 }

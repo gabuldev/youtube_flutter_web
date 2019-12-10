@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
             )),
         drawer: DrawerWidget(),
         body: RootPage(
-          key: feedKey,
+          feedKey: feedKey,
         ));
   }
 }

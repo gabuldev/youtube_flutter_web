@@ -4,7 +4,8 @@ import 'package:interact/pages/login/login_page.dart';
 import 'package:interact/shared/auth/auth_bloc.dart';
 
 class RootPage extends StatefulWidget {
-  RootPage({Key key}) : super(key: key);
+  final Key feedKey;
+  RootPage({Key key, this.feedKey}) : super(key: key);
 
   @override
   _RootPageState createState() => _RootPageState();
@@ -16,6 +17,7 @@ class _RootPageState extends State<RootPage> {
   @override
   void initState() {
     bloc = AuthBloc.getInstance();
+    bloc.currentUser();
     super.initState();
   }
 
@@ -29,11 +31,11 @@ class _RootPageState extends State<RootPage> {
   Widget build(BuildContext context) {
     return StreamBuilder<bool>(
         stream: bloc.statusOut,
-        initialData: false,
+        initialData: true,
         builder: (context, snapshot) {
           return snapshot.data
               ? FeedPage(
-                  key: widget.key,
+                  key: widget.feedKey,
                 )
               : LoginPage();
         });

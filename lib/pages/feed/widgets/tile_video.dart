@@ -26,6 +26,7 @@ class TileVideo extends StatelessWidget {
             isThreeLine: true,
             title: Text(
               snapshot.title,
+              maxLines: 2,
             ),
             leading: FutureBuilder<String>(
               future: FeedRepository(CustomDio())
@@ -51,6 +52,7 @@ class TileVideo extends StatelessWidget {
                   if (future.hasData) {
                     return Text(
                       "${snapshot.channelTitle} ● ${TransformUtil.views(future.data)} há ${TransformUtil.dateParse(snapshot.publishedAt)}",
+                      overflow: TextOverflow.ellipsis,
                     );
                   } else {
                     return Text("...");

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:interact/pages/feed/feed_bloc.dart';
 import 'package:interact/pages/feed/feed_repository.dart';
 import 'package:interact/pages/feed/widgets/tile_video.dart';
-import 'package:interact/pages/login/login_bloc.dart';
 import 'package:interact/shared/models/video_model.dart';
 import 'package:interact/shared/service/custom_dio.dart';
 import 'package:interact/shared/utils/screen_util.dart';

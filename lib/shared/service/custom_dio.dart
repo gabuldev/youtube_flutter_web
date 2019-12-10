@@ -5,7 +5,7 @@ import 'package:interact/shared/auth/auth_bloc.dart';
 class CustomDio extends DioForBrowser {
   CustomDio() {
     options.baseUrl = "https://www.googleapis.com/youtube/v3";
-    interceptors.add(
-        InterceptorToken(token: () async => AuthBloc.getInstance().getJWT()));
+    /*interceptors.add(
+        InterceptorToken(token: () async => AuthBloc.getInstance().getJWT()));*/
   }
 }

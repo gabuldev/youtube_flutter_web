@@ -7,10 +7,9 @@ class AuthBloc {
 
   static AuthBloc getInstance() {
     if (instance == null) {
-      return AuthBloc();
-    } else {
-      return instance;
+      instance = AuthBloc();
     }
+    return instance;
   }
 
   AuthBloc() {
@@ -19,7 +18,7 @@ class AuthBloc {
     statusIn = status.sink;
   }
 
-  var status = BehaviorSubject<bool>.seeded(false);
+  var status = BehaviorSubject<bool>.seeded(true);
   Observable<bool> statusOut;
   Sink<bool> statusIn;
 
@@ -32,9 +31,9 @@ class AuthBloc {
         if (user == null) {
           user = await authFirebase.currentUser();
           if (user != null) {
-            //AppModule.to.getBloc<AppBloc>().login();
+            statusIn.add(true);
           } else {
-            //AppModule.to.getBloc<AppBloc>().logout();
+            statusIn.add(false);
           }
         }
       }
@@ -45,7 +44,8 @@ class AuthBloc {
 
   Future<String> getJWT() async {
     try {
-      var id = await user.getIdToken(refresh: true);
+      var id = await user.getIdToken();
+      print("Bearer " + id.token);
       return "Bearer " + id.token;
     } catch (e) {
       throw e;

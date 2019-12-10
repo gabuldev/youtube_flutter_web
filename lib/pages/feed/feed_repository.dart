@@ -8,11 +8,11 @@ class FeedRepository {
 
   Future<List<VideoModel>> getVideos({String search}) async {
     var response = await client.get('/search', queryParameters: {
-      'key': 'AIzaSyAPzdDA5azRi2VFdVcN-9VsAVjLbHK2cvk',
+      'key': 'AIzaSyBH7R8WrzzQ_7jOjukoVWOR5aSChlWkxEs',
       //'channelId': 'UC13gar1iS-icxHq7wEQLPaQ',
       'part': 'snippet,id',
       'order': 'date',
-      'maxResults': 20,
+      'maxResults': 15,
       'q': search ?? 'flutterando'
     });
     return (response.data['items'] as List)
@@ -22,7 +22,7 @@ class FeedRepository {
 
   Future<String> getImage({String idChannel}) async {
     var response = await client.get("/channels", queryParameters: {
-      'key': 'AIzaSyAPzdDA5azRi2VFdVcN-9VsAVjLbHK2cvk',
+      'key': 'AIzaSyBH7R8WrzzQ_7jOjukoVWOR5aSChlWkxEs',
       'part': 'snippet',
       'id': idChannel
     });
@@ -32,7 +32,7 @@ class FeedRepository {
 
   Future<String> getStatistics({String idVideo}) async {
     var response = await client.get("/videos", queryParameters: {
-      'key': 'AIzaSyAPzdDA5azRi2VFdVcN-9VsAVjLbHK2cvk',
+      'key': 'AIzaSyBH7R8WrzzQ_7jOjukoVWOR5aSChlWkxEs',
       'part': 'statistics',
       'id': idVideo
     });
